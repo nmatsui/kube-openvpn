@@ -54,7 +54,7 @@ getroute() {
     echo ${1%/*} $(cidr2mask $1)
 }
 
-# Server name is in the form "udp://vpn.example.com:1194"
+# Server name is in the form "udp://vpn.example.com:443"
 if [[ "$OVPN_SERVER_URL" =~ ^((udp|tcp)://)?([0-9a-zA-Z\.\-]+)(:([0-9]+))?$ ]]; then
     OVPN_PROTO=${BASH_REMATCH[2]};
     OVPN_CN=${BASH_REMATCH[3]};

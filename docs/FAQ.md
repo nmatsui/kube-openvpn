@@ -33,7 +33,7 @@ This works just like any other PKI system. If you followed the setup instruction
 
 Revoke the client (where <CN> is the client name):
 ```
-docker run --user=$(id -u) -e OVPN_SERVER_URL=tcp://vpn.my.fqdn:1194 -v $PWD:/etc/openvpn -ti ptlange/openvpn easyrsa revoke <CN>
+docker run --user=$(id -u) -e OVPN_SERVER_URL=tcp://vpn.my.fqdn:443 -v $PWD:/etc/openvpn -ti ptlange/openvpn easyrsa revoke <CN>
 ```
 
 Now update the CRL on the cluster:
